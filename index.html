@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox vs Grid Layout Comparison</title>
+    <!-- Toggle between stylesheets for comparison -->
+    <link id="stylesheet" rel="stylesheet" href="flexbox-style.css">
+    <style>
+        /* Button to switch between layouts */
+        .layout-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <button class="layout-toggle" onclick="toggleLayout()">Switch to Grid</button>
+    
+    <div class="container">
+        <header class="header">
+            <h1>Header Section</h1>
+            <p>This is the header content that spans the full width</p>
+        </header>
+        
+        <main class="main-content">
+            <h2>Main Content Area</h2>
+            <p>This is the main content area that should expand to fill the available space between the header and footer.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2024 Flexbox vs Grid Comparison. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        let isFlexbox = true;
+        
+        function toggleLayout() {
+            const stylesheet = document.getElementById('stylesheet');
+            const button = document.querySelector('.layout-toggle');
+            
+            if (isFlexbox) {
+                stylesheet.href = 'grid-style.css';
+                button.textContent = 'Switch to Flexbox';
+                isFlexbox = false;
+            } else {
+                stylesheet.href = 'flexbox-style.css';
+                button.textContent = 'Switch to Grid';
+                isFlexbox = true;
+            }
+        }
+    </script>
+</body>
+</html>
