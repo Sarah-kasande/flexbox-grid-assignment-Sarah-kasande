@@ -4,7 +4,7 @@
 
 ## Overview
 
-This learning activity will guide students through creating the same page layout using both Flexbox and CSS Grid. By implementing identical layouts with different techniques, students will develop a deep understanding of when and how to use each approach effectively.
+ This learning activity will guide students through creating the same page layout using both Flexbox and CSS Grid. By implementing identical layouts with different techniques, students will develop a deep understanding of when and how to use each approach effectively.
 
 ## Learning Objectives
 
